@@ -12,6 +12,7 @@ public class ThreadCreation {
         t1.setPriority(Thread.MAX_PRIORITY);
         System.out.println(Thread.currentThread().getName());
         t1.start();
+        t1.join(); //main t1in bitmesini bekler
         System.out.println(Thread.currentThread().getName());
     }
 }
