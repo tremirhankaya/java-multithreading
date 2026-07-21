@@ -2,12 +2,12 @@ package examples;
 
 import java.util.List;
 // Multi executor example
-public class example2 {
+public class Example2 {
 
     private final List<Runnable> tasks;
 
 
-    public example2(List<Runnable> tasks) {
+    public Example2(List<Runnable> tasks) {
         this.tasks = tasks;
     }
     public void executeTasks() {
