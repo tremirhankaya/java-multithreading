@@ -9,7 +9,7 @@ package examples;
 import java.math.BigInteger;
 
 
-public class Example3 {
+public class ThreadInterruptionExample {
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new LongComputationTask(new BigInteger("200000"), new BigInteger("100000000")));

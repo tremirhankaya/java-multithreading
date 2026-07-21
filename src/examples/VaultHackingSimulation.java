@@ -3,7 +3,7 @@ package examples;
 import java.util.List;
 import java.util.Random;
 
-public class Example1 {
+public class VaultHackingSimulation {
     public static void main(String[] args) {
         Random rand = new Random();
         Vault vault= new Vault(String.valueOf(rand.nextInt(9999)));
@@ -88,4 +88,3 @@ public class Example1 {
 
     }
 }
-
