@@ -9,7 +9,7 @@ public class NetworkLatencyExample {
     public static void main(String[] args) throws InterruptedException {
         // Örnek URL listesi
         List<String> urls = List.of(
-                "service/A", "service/B", "service/C", "service/D", "service/E"
+                "service/A", "service/B", "service/C", "service/D", "service/E","service/F"
         );
 
         int simulatedLatencyMs = 200; // gecikme ms
