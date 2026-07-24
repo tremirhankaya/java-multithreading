@@ -1,13 +1,15 @@
 package examples;
 
 public class RaceCondition {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         InventoryCounter inventoryCounter = new InventoryCounter(); //shared object
         Import importThread = new Import(inventoryCounter);
         Export exportThread = new Export(inventoryCounter);
 
         importThread.start();
         exportThread.start();
+        importThread.join();
+        exportThread.join();
 
        System.out.println("Final inventory count: " + inventoryCounter.getItems());
 
@@ -52,15 +54,15 @@ public class RaceCondition {
     private static class InventoryCounter {
         private int items = 0;
 
-        public void increment() {
+        public synchronized   void increment() {
             items++;
         }
 
-        public void decrement() {
+        public synchronized void decrement() {
             items--;
         }
 
-        public int getItems() {
+        public synchronized int getItems() {
             return items;
         }
     }
